@@ -1,1 +1,41 @@
+一、CSS部分
 
+1.盒模型：指的是用来展示页面元素的矩形区域；
+  标准盒模型与IE盒模型的区别：标准盒模型的 width = content，IE盒模型的 width = conten+padding+border；
+  标准盒模型与IE盒模型切换：box-sizing属性 标准盒模型值为content-box（从content开始计算） IE盒模型值为border-box（从border开始计算）；
+
+2.实现0.5px的线
+  a.meta viewport设置；
+  b.border-image背景图片方式；
+  c.transform：scale()等比缩放处理；
+ 
+3.link标签跟@import的区别
+  a.标签类型不同（link为HTML标签，@import为css提供）；
+  b.加载顺序不同（link在页面被加载时加载，@import在页面加载完开始加载）；
+  c.兼容性不同（link没有兼容性问题，@import必须IE5以上版本支持）；
+  d.link的优先级高于@import；
+  
+4.transiton和animation的区别
+  a.触发条件不同（transition需要一个触发事件，animation能自行触发）；
+  b.动画帧不同（transition只有from to两帧，animation可以设置多帧）；
+  
+5.关于flex布局
+  具体参见：http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool%EF%BC%88%E8%AF%AD%E6%B3%95%E7%AF%87%EF%BC%89
+  
+6.垂直居中的方法
+  a.margin:auto方法（margin: auto;top: 0;left: 0;bottom: 0;right: 0;）;
+  b.transform方法（top: 50%;left: 50%;transform: translate(-50%, -50%)）;
+  c.flex方法（justify-content: center;align-items: center;）;
+  d.table-cell（设置父元素display: table-cell;vertical-align: center;）;
+ 
+7.块元素和行元素区别
+  a.块元素：占据一整行，会撑满父元素，margin，padding，width属性可以生效；
+  b.行元素：不占据整行，margin，padding，width都不生效；
+  
+8.opacity: 0;visibility: hidden;display: none;区别
+  共同点：元素被隐藏；
+  差异：opacity（不改变页面布局，元素绑定事件能被执行）；
+       visibility（不改变页面布局，元素绑定事件不能被执行）；
+       display（改变页面布局，元素绑定事件不能被执行，相当于删掉该元素）；
+    
+    
