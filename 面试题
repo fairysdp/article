@@ -18,10 +18,23 @@
   核心：因为JavaScript是一门单线程语言，事件得按顺序挨个执行所以衍生出了同步任务和异步任务，同步任务进入主线程，异步任务进入event table，待
   函数执行完毕进入event queue，待主线程的任务执行完毕会去event queue里读取新的函数；
   异步任务又分为宏任务和微任务，每执行完一次宏任务就会清空一次微任务，然后再执行下一次宏任务以此完成事件循环机制。
+  
+5.改变this指向（apply，call，bind的区别）
+  a.apply和call基本类似，传入的第一个参数都是指向的对象，只是第二个参数apply传入的是数组，call传入的是参数的枚举；
+  b.bind函数不会立刻执行，需要手动执行；
+  
+6.闭包
+  
+  
+7.判断数据类型的方法
+  a.使用typeOf，弊端：对基本数据类型能做出准确判断，引用类型返回的都是object；
+  b.使用instanceOf，通常用于引用类型，弊端：只能判断当前对象是否属于原型链，而不能获取对象的具体类型；
+  c.使用constructor，弊端：如果重写了prototype，原有的constructor会消失；
+  d.使用Object.prototype.toString.call()，目前判断数据类型的最佳解决方案；
 
 二、Vue部分
 
-二、CSS部分
+三、CSS部分
 
 1.盒模型：指的是用来展示页面元素的矩形区域；
   标准盒模型与IE盒模型的区别：标准盒模型的 width = content，IE盒模型的 width = conten+padding+border；
@@ -60,5 +73,3 @@
   差异：opacity（不改变页面布局，元素绑定事件能被执行）；
        visibility（不改变页面布局，元素绑定事件不能被执行）；
        display（改变页面布局，元素绑定事件不能被执行，相当于删掉该元素）；
-    
-    
